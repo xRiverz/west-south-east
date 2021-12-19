@@ -14,6 +14,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func unwind(_ seg: UIStoryboardSegue, sender: Any?){
+        let direction = segue.direction as! OtherViewController
+        let btn = sender as! UIButton
+        
+        direction.from = btn.currentTitle
+        
+    }
 
 }
 
